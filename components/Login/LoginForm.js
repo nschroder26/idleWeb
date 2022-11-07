@@ -43,7 +43,9 @@ function LoginForm() {
         }
       })
       .then((data) => {
-        dispatch(authActions.loginUser(data.idToken));
+        dispatch(
+          authActions.loginUser({ token: data.idToken, userId: data.localId })
+        );
       })
       .catch((err) => {
         alert(err.message);
