@@ -10,14 +10,3 @@
   margin: auto;
   padding: 1rem;
 }
-
-.register {
-  display: inline;
-  margin-left: 1.5rem;
-  text-decoration: underline;
-}
-
-.register:hover {
-  color: blue;
-  cursor: pointer;
-}

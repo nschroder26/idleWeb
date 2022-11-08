@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "../Store/auth-slice";
 import Navbar from "react-bootstrap/Navbar";
