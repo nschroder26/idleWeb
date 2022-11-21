@@ -19,6 +19,15 @@ const ProfileCreation = () => {
     set(ref(db, "/Users/" + userId), {
       icon: "crossedswords.png",
       name: enteredCharacterName,
+      skills: {
+        attack: { level: 1, name: "Attack" },
+        defense: { level: 1, name: "Defense" },
+        firemaking: { level: 1, name: "Firemaking" },
+        fishing: { level: 1, name: "Fishing" },
+        mining: { level: 1, name: "Mining" },
+        smithing: { level: 1, name: "Smithing" },
+        woodcutting: { level: 1, name: "Woodcutting" },
+      },
     });
 
     router.push("/character");
