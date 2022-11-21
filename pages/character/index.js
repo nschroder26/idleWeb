@@ -1,27 +1,30 @@
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { auth } from "../../components/Utils/firebase";
-import { database } from "../../components/Utils/firebase";
 import { getDatabase, onValue, ref } from "firebase/database";
 import CharCard from "../../components/CharCard/charCard";
 
 const Character = () => {
   const userId = auth.currentUser.uid;
   const db = getDatabase();
-  const userRef = ref(db, "/Users/" + userId);
-  let userData = {};
+  const [userData, setUserData] = useState([]);
 
-  const setData = (data) => {
-    userData = data;
-  };
-
-  onValue(userRef, (snapshot) => {
-    const data = snapshot.val();
-    setData(data);
-  });
+  //caputures current user from firebase db
+  useEffect(() => {
+    const userRef = ref(db, "/Users/" + userId);
+    onValue(userRef, (snapshot) => {
+      const data = snapshot.val();
+      setUserData(data);
+    });
+  }, []);
 
   return (
     <Fragment>
-      <CharCard userData={userData} />
+      <CharCard
+        name={userData.name}
+        icon={userData.icon}
+        //attack={userData.skills.attack.level}
+        //defense={userData.skills.defense.level}
+      />
     </Fragment>
   );
 };

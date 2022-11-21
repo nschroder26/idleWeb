@@ -1,0 +1,12 @@
+.cardform {
+  width: 45vw;
+  margin: auto;
+  margin-top: 10vw;
+  background-color: rgb(114, 153, 225);
+}
+
+.form {
+  width: 75%;
+  margin: auto;
+  padding: 1rem;
+}

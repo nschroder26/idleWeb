@@ -1,0 +1,19 @@
+.charCard {
+  background-color: blue;
+  width: 30vw;
+  margin: 3rem;
+}
+
+.charName {
+  margin: auto;
+  padding: 0.75rem;
+}
+
+.charIcon {
+  width: 10vw;
+  margin: 2vw;
+}
+
+.stats {
+  padding: 0.5rem;
+}

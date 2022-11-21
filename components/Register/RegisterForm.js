@@ -6,7 +6,6 @@ import { useDispatch } from "react-redux";
 import { authActions } from "../Store/auth-slice";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Utils/firebase";
-import { useRouter } from "next/router";
 
 import classes from "./RegisterForm.module.css";
 
@@ -15,7 +14,6 @@ const RegisterForm = () => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
   const confirmedInputRef = useRef();
-  const router = useRouter();
 
   const registerUser = async (event) => {
     event.preventDefault();
@@ -32,12 +30,12 @@ const RegisterForm = () => {
         );
         dispatch(authActions.loginUser());
       } catch (error) {
-        console.log(error.message);
+        alert(error.message);
       }
     } else {
       alert("Your passwords do not match");
     }
-    router.push("/character");
+    dispatch(authActions.registeringUser());
   };
 
   return (
