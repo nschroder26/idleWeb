@@ -22,8 +22,8 @@ const Character = () => {
       <CharCard
         name={userData.name}
         icon={userData.icon}
-        //attack={userData.skills.attack.level}
-        //defense={userData.skills.defense.level}
+        attack={userData.skills.attack.level}
+        defense={userData.skills.defense.level}
       />
     </Fragment>
   );
