@@ -1,10 +1,19 @@
 .alertCard {
-  background-color: rgb(55, 55, 55);
+  background-color: rgb(193, 193, 193);
   width: 90%;
   margin: auto;
+  color: black;
+}
+
+.alertCol {
+  align-self: center;
 }
 
 .alertText {
   margin-left: 1rem;
   padding: 0.25rem;
+}
+
+.alertDismiss {
+  margin: 0.25rem;
 }
