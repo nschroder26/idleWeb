@@ -1,5 +1,12 @@
+import SkillsCard from "../../components/Skills/skillsCard";
+import { Fragment } from "react";
+
 const Skills = () => {
-  return <div>Skills page</div>;
+  return (
+    <Fragment>
+      <SkillsCard />
+    </Fragment>
+  );
 };
 
 export default Skills;
