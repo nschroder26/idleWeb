@@ -1,0 +1,10 @@
+.alertCard {
+  background-color: rgb(55, 55, 55);
+  width: 90%;
+  margin: auto;
+}
+
+.alertText {
+  margin-left: 1rem;
+  padding: 0.25rem;
+}

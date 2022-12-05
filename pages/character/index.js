@@ -3,6 +3,7 @@ import { auth } from "../../components/Utils/firebase";
 import { getDatabase, onValue, ref } from "firebase/database";
 import CharCard from "../../components/CharCard/charCard";
 import { onAuthStateChanged } from "firebase/auth";
+import ActivityFeed from "../../components/Activity/activityFeed";
 
 const Character = () => {
   const db = getDatabase();
@@ -30,6 +31,7 @@ const Character = () => {
         attack={userData?.skills?.attack?.level}
         defense={userData?.skills?.defense?.level}
       />
+      <ActivityFeed />
     </Fragment>
   );
 };
