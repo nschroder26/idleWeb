@@ -1,15 +1,13 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import classes from "./activityAlert.module.css";
 
-const ActivityAlert = () => {
+const ActivityAlert = (props) => {
   return (
     <Card className={classes.alertCard}>
       <Container>
         <Row>
           <Col className={classes.alertCol}>
-            <Card.Text className={classes.alertText}>
-              This is an alert
-            </Card.Text>
+            <Card.Text className={classes.alertText}>{props.message}</Card.Text>
           </Col>
           <Col md="auto">
             <Button
