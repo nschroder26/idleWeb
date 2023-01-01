@@ -26,14 +26,17 @@ const ActivityFeed = () => {
     });
   }, []);
 
-  const currentAlerts = userAlerts.map((alert) => (
+  const currentAlerts = userAlerts?.map((alert) => (
     <ActivityAlert key={alert.id} message={alert.message} />
   ));
 
   return (
     <Card bg="dark" className={classes.feedCard}>
       <Card.Title className={classes.feedTitle}>Recent Activity</Card.Title>
-      <ul>{currentAlerts}</ul>
+      {currentAlerts && <ul>{currentAlerts}</ul>}
+      {!currentAlerts && (
+        <p className={classes.feedMessage}>No Recent Activity</p>
+      )}
     </Card>
   );
 };

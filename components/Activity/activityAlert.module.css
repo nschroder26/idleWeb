@@ -1,8 +1,9 @@
 .alertCard {
-  background-color: rgb(193, 193, 193);
+  background-color: rgb(85, 85, 85);
   width: 90%;
   margin: auto;
-  color: black;
+  margin-top: 0.75rem;
+  color: white;
 }
 
 .alertCol {

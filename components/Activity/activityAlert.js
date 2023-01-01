@@ -11,7 +11,7 @@ const ActivityAlert = (props) => {
           </Col>
           <Col md="auto">
             <Button
-              variant="outline-dark"
+              variant="outline-light"
               size="sm"
               className={classes.alertDismiss}
               aria-label="Close"
