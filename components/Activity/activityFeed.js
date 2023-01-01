@@ -10,9 +10,8 @@ import classes from "./activityFeed.module.css";
 const ActivityFeed = () => {
   const db = getDatabase();
   const [userAlerts, setUserAlerts] = useState();
-  const alerts = [];
 
-  //captures current user from firebase db
+  //captures current user alerts from firebase db
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -26,6 +25,7 @@ const ActivityFeed = () => {
     });
   }, []);
 
+  //maps alerts to display
   const currentAlerts = userAlerts?.map((alert) => (
     <ActivityAlert key={alert.id} message={alert.message} />
   ));
