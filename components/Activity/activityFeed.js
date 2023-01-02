@@ -41,6 +41,7 @@ const ActivityFeed = () => {
         const alertData = ref(db, "/Users/" + userId + "/alerts");
         onValue(alertData, (snapshot) => {
           const data = snapshot.val();
+          //checks if alert list is null, skips conversion for empty list
           if (data === null) {
             setUserAlerts(data);
           } else {

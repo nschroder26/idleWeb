@@ -44,13 +44,13 @@ const MyNavbar = () => {
             {userLoggedIn && (
               <Fragment>
                 <Link href="/character" className={classes.navlink}>
-                  Character
+                  Overview
                 </Link>
                 <Link href="/skills" className={classes.navlink}>
-                  Skills
+                  Refining
                 </Link>
                 <Link href="/raid" className={classes.navlink}>
-                  Raid
+                  Crafting
                 </Link>
                 <Link
                   href="/"
