@@ -39,13 +39,15 @@ const ActivityFeed = () => {
       if (currentUser) {
         const userId = currentUser.uid;
         const alertData = ref(db, "/Users/" + userId + "/alerts");
-        if (true) {
-          onValue(alertData, (snapshot) => {
-            const data = snapshot.val();
+        onValue(alertData, (snapshot) => {
+          const data = snapshot.val();
+          if (data === null) {
+            setUserAlerts(data);
+          } else {
             const transData = Object.values(data);
             setUserAlerts(transData);
-          });
-        }
+          }
+        });
       }
     });
   }, []);
